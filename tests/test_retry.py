@@ -1,12 +1,12 @@
 import pytest
-from miniretry import retry
+from miniretry.retry import retry
 
 
 def fails_every_time():
     raise RuntimeError()
 
 
-def test_retry_exception(self):
+def test_retry_exception():
     with pytest.raises(RuntimeError):
         @retry(count=2)
         def fun():
@@ -15,7 +15,7 @@ def test_retry_exception(self):
         fun()
 
 
-def test_retry_passes(self):
+def test_retry_passes():
     @retry(count=1)
     def fun():
         return "ok"

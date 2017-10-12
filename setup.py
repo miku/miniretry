@@ -7,5 +7,9 @@ setup(
     author="Martin Czygan",
     author_email="martin.czygan@gmail.com",
     url="http://github.com/miku/miniretry",
-    py_modules=["miniretry"],
-    scripts=['bin/miniretry'])
+    packages=['miniretry'],
+    entry_points={
+        'console_scripts': [
+            'miniretry=miniretry.__main__:main'
+        ]
+    },)
