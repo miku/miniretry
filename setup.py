@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name="miniretry",
-    version="0.1.1",
+    version="0.1.2",
     description="Retry helpers",
     author="Martin Czygan",
     author_email="martin.czygan@gmail.com",

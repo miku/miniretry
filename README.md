@@ -29,3 +29,24 @@ $ pytest -q
 ..
 2 passed in 0.01 seconds```
 ```
+
+How to publish
+--------------
+
+* [Register an account](https://pypi.python.org/pypi%3Aaction=register_form) on pypi.
+
+Put credentials into a local configuration file
+
+```
+$ cat ~/.pypirc
+[pypi]
+username:<your-user-name>
+password:<your-password>
+```
+
+To publish, run:
+
+```shell
+$ python setup.py sdist upload
+...
+```
