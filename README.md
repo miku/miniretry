@@ -1,33 +1,31 @@
 README
 ======
 
-Example for testing and packaging.
+Example for testing, packaging and distribution.
 
-During the session we published this package on pypi:
+Write, test, publish on pypi cycle.
 
 * https://pypi.python.org/pypi/miniretry
 
 ----
 
-```
+```shell
 .
-├── [ 192]  Makefile                # Recipe for make.
-├── [  60]  README                  # Documentation.
-├── [ 102]  bin                     # Executable scripts directory.
-│   └── [  83]  miniretry           # Executable.
-├── [ 559]  miniretry.py            # Library code.
-├── [ 513]  miniretry_test.py       # Test code.
-└── [ 313]  setup.py                # Setup recipe.
+├── [ 560]  Makefile
+├── [ 920]  README.md
+├── [ 170]  miniretry
+│   ├── [   0]  __init__.py
+│   ├── [ 101]  __main__.py
+│   └── [ 694]  retry.py
+├── [ 371]  setup.py
+└── [ 102]  tests
+    └── [ 364]  test_retry.py
 ```
 
-Testing code, that will be used by others is important. Python comes with the unittest module
-in the standard library - additionally, there are other libraries to help with testing like pytest.
+> "Code without tests is broken" -- Jacob Kaplan Moss
 
-```
-$ python miniretry_test.py
+```shell
+$ pytest -q
 ..
-----------------------------------------------------------------------
-Ran 2 tests in 0.000s
-
-OK
+2 passed in 0.01 seconds```
 ```
