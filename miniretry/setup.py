@@ -1,5 +1,4 @@
-from distutils.core import setup
-# from setuptools import setup
+from setuptools import setup
 
 setup(
     name="miniretry",
@@ -9,4 +8,4 @@ setup(
     author_email="martin.czygan@gmail.com",
     url="http://github.com/miku/miniretry",
     py_modules=["miniretry"],
-    scripts=['bin/miniretry'], )
+    scripts=['bin/miniretry'])
