@@ -7,6 +7,6 @@ setup(
     description="Retry helpers",
     author="Martin Czygan",
     author_email="martin.czygan@gmail.com",
-    url="http://example.com",
+    url="http://github.com/miku/miniretry",
     py_modules=["miniretry"],
     scripts=['bin/miniretry'], )

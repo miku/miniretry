@@ -1,4 +1,4 @@
-import unittest
+import pytest
 from miniretry import retry
 
 
@@ -6,23 +6,18 @@ def fails_every_time():
     raise RuntimeError()
 
 
-class RetryTest(unittest.TestCase):
-    def test_retry_exception(self):
-        with self.assertRaises(RuntimeError):
-
-            @retry(count=2)
-            def fun():
-                fails_every_time()
-
-            fun()
-
-    def test_retry_passes(self):
-        @retry(count=1)
+def test_retry_exception(self):
+    with pytest.raises(RuntimeError):
+        @retry(count=2)
         def fun():
-            return "ok"
+            fails_every_time()
 
-        self.assertEqual("ok", fun())
+        fun()
 
 
-if __name__ == '__main__':
-    unittest.main()
+def test_retry_passes(self):
+    @retry(count=1)
+    def fun():
+        return "ok"
+
+    assert fun() == "ok"
