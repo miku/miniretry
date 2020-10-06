@@ -15,7 +15,7 @@ Write, test, publish on pypi cycle.
 ├── [ 920]  README.md
 ├── [ 170]  miniretry
 │   ├── [   0]  __init__.py
-│   ├── [ 101]  __main__.py
+│   ├── [ 101]  main.py
 │   └── [ 694]  retry.py
 ├── [ 371]  setup.py
 └── [ 102]  tests

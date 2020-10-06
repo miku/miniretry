@@ -10,6 +10,6 @@ setup(
     packages=['miniretry'],
     entry_points={
         'console_scripts': [
-            'miniretry=miniretry.__main__:main'
+            'miniretry=miniretry.main:main'
         ]
     },)
